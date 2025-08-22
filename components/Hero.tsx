@@ -50,14 +50,6 @@ export default function Hero() {
         <motion.p variants={itemVariants} className="max-w-xl text-lg text-gray-300 mb-8">
           {personalInfo.shortBio}
         </motion.p>
-        <motion.div variants={itemVariants}>
-          <a
-            href={personalInfo.achievementsLink}
-            className="border border-violet-500 text-violet-500 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-violet-500 hover:text-white transition-colors shadow-lg"
-          >
-            Let's start with Achievements
-          </a>
-        </motion.div>
       </motion.div>
     </section>
   )

@@ -38,9 +38,8 @@ export default function Navbar() {
 
   // Custom SVG Logo (P inside hexagon)
   const Logo = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" class="min-w-[43px] h-[43px]"><text fill="#8B5CF6" font-family="Calibre-Medium, Calibre" font-size="50" font-weight="400" letter-spacing="4.167" transform="translate(36 33)"><tspan x="0.142" y="33">K</tspan></text><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M50 5L11 27v45l39 23 39-22V28z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" className="min-w-[43px] h-[43px]"><text fill="#8B5CF6" fontFamily="Calibre-Medium, Calibre" fontSize="50" fontWeight="400" letterSpacing="4.167" transform="translate(36 33)"><tspan x="0.142" y="33">K</tspan></text><path stroke="#000000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="5" d="M50 5L11 27v45l39 23 39-22V28z"></path></svg>
   )
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-900 shadow-lg py-3' : 'bg-transparent py-5'}`}>
       <nav className="container mx-auto px-6 flex justify-between items-center h-full">

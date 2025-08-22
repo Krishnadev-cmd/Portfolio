@@ -65,7 +65,7 @@ export default function Projects() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  layout="fill"
+                  fill 
                   objectFit="cover"
                   className="opacity-20 lg:opacity-100 transition-opacity duration-300"
                 />

@@ -61,16 +61,15 @@ export default function About() {
           </div>
         </div>
         <div className="mx-auto mt-16 md:mt-0 md:ml-14">
-          <div className="wrap-image w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 relative rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src={personalInfo.profilePicture}
-              alt="profile pic"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
-            />
-          </div>
-        </div>
+            <div className="wrap-image w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 relative rounded-lg overflow-hidden shadow-lg">
+                <Image
+                src={personalInfo.profilePicture}
+                alt="profile pic"
+                fill
+                className="rounded-lg object-cover object-top"
+                />
+            </div>
+            </div>
       </motion.div>
     </section>
   )
