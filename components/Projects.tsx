@@ -3,74 +3,109 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Github, ExternalLink } from 'lucide-react'
 import { projects } from '@/lib/data'
+import Image from 'next/image'
 
 export default function Projects() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   })
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  }
+
   return (
-    <section id="projects" className="py-20 bg-gray-50">
+    <section id="projects" className="py-24 md:py-32">
       <div className="container mx-auto px-6">
-        <motion.div
+        <motion.h2
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.6 }}
+          variants={itemVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="text-4xl md:text-5xl font-bold text-center mb-16 text-white"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Featured Projects</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <img
+          My Projects
+        </motion.h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              className="bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-transform duration-300"
+            >
+              <div className="relative w-full h-56">
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300"
                 />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <a
-                      href={project.liveUrl}
-                      className="flex items-center text-blue-600 hover:text-blue-700"
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2 text-white">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm font-medium"
                     >
-                      <ExternalLink size={16} className="mr-1" />
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="flex items-center text-gray-600 hover:text-gray-700"
-                    >
-                      <Github size={16} className="mr-1" />
-                      Code
-                    </a>
-                  </div>
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <div className="flex space-x-4 mt-4">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-violet-400 hover:text-violet-500 transition-colors"
+                  >
+                    <ExternalLink size={20} className="mr-2" />
+                    Live Demo
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-400 hover:text-white transition-colors"
+                  >
+                    <Github size={20} className="mr-2" />
+                    Code
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>

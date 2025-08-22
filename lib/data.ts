@@ -3,6 +3,8 @@ export const personalInfo = {
   email: 'john.doe@example.com',
   phone: '+1 123-456-7890',
   address: '123 Main St, Anytown, USA',
+  bio: 'I am a passionate and creative full-stack developer with a knack for building beautiful and functional web applications. I love turning ideas into reality and am always eager to learn new technologies.',
+  profilePicture: '/profile.svg',
   social: {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
@@ -10,12 +12,16 @@ export const personalInfo = {
 };
 
 export const skills = [
-  { name: 'JavaScript', level: '90%' },
-  { name: 'TypeScript', level: '85%' },
-  { name: 'React', level: '95%' },
-  { name: 'Next.js', level: '80%' },
-  { name: 'Node.js', level: '75%' },
-  { name: 'Tailwind CSS', level: '85%' },
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Next.js',
+  'Node.js',
+  'Tailwind CSS',
+  'HTML',
+  'CSS',
+  'Git',
+  'Framer Motion',
 ];
 
 export const projects = [

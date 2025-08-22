@@ -6,42 +6,58 @@ import { skills } from '@/lib/data'
 export default function Skills() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   })
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  }
+
   return (
-    <section id="skills" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <motion.div
+    <section id="skills" className="py-24 md:py-32">
+      <div className="container mx-auto px-6 max-w-4xl text-center">
+        <motion.h2
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.6 }}
+          variants={itemVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="text-4xl md:text-5xl font-bold mb-12 text-white"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Skills & Technologies</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                className="bg-gray-50 p-6 rounded-lg"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <h3 className="text-lg font-semibold mb-4 text-gray-800">{skill.name}</h3>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <motion.div
-                    className="bg-blue-600 h-2 rounded-full"
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                    transition={{ duration: 1, delay: index * 0.1 + 0.5 }}
-                  />
-                </div>
-                <p className="text-sm text-gray-600 mt-2">{skill.level}%</p>
-              </motion.div>
-            ))}
-          </div>
+          My Skills
+        </motion.h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? 'visible' : 'hidden'}
+          className="flex flex-wrap justify-center gap-4"
+        >
+          {skills.map((skill) => (
+            <motion.span
+              key={skill}
+              variants={itemVariants}
+              className="bg-gray-800 text-gray-300 px-5 py-2 rounded-full text-lg font-medium hover:bg-violet-600 hover:text-white transition-colors duration-300 cursor-pointer"
+            >
+              {skill}
+            </motion.span>
+          ))}
         </motion.div>
       </div>
     </section>
