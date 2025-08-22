@@ -30,3 +30,17 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.Typewriter__cursor {
+  background-color: var(--accent); /* Use accent color for cursor */
+  width: 2px; /* Make it a bit wider */
+}

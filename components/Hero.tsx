@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { personalInfo } from '@/lib/data'
+import TypewriterEffect from './TypewriterEffect'
 
 export default function Hero() {
   const containerVariants = {
@@ -8,7 +9,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.1,
       },
     },
   }
@@ -24,43 +25,37 @@ export default function Hero() {
     },
   }
 
+  const roles = [
+    'Next.js Developer',
+    'Full-Stack Developer',
+    'AI/ML Enthusiast',
+  ]
+
   return (
-    <section className="relative h-screen flex items-center justify-center text-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        {/* Add subtle background animation or particles here if desired */}
-      </div>
+    <section id="hero" className="h-screen max-w-5xl mx-auto px-6 flex flex-col justify-center">
       <motion.div
-        className="relative z-10 max-w-4xl mx-auto px-6"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <motion.h1
-          variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight"
-        >
-          Hi, I'm <span className="text-violet-500">{personalInfo.name}</span>.
+        <motion.h1 variants={itemVariants} className="text-violet-500 mb-4 text-lg md:text-xl">
+          Hi, my name is
         </motion.h1>
-        <motion.p
-          variants={itemVariants}
-          className="text-xl md:text-2xl text-gray-300 mb-8"
-        >
-          {personalInfo.bio}
+        <motion.h2 variants={itemVariants} className="text-4xl md:text-6xl font-bold text-white mb-4">
+          {personalInfo.name}
+        </motion.h2>
+        <motion.h3 variants={itemVariants} className="text-xl md:text-3xl text-gray-400 mb-6">
+          <TypewriterEffect words={roles} />
+        </motion.h3>
+        <motion.p variants={itemVariants} className="max-w-xl text-lg text-gray-300 mb-8">
+          {personalInfo.shortBio}
         </motion.p>
-        <motion.div variants={itemVariants} className="flex justify-center space-x-4">
+        <motion.div variants={itemVariants}>
           <a
-            href="#contact"
-            className="bg-violet-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-violet-700 transition-colors shadow-lg"
+            href={personalInfo.achievementsLink}
+            className="border border-violet-500 text-violet-500 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-violet-500 hover:text-white transition-colors shadow-lg"
           >
-            Get in Touch
-          </a>
-          <a
-            href={personalInfo.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-700 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-600 transition-colors shadow-lg"
-          >
-            View GitHub
+            Let's start with Achievements
           </a>
         </motion.div>
       </motion.div>
