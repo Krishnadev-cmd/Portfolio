@@ -67,6 +67,7 @@ export default function Projects() {
                   alt={project.title}
                   fill 
                   objectFit="cover"
+                  objectPosition="top"
                   className="opacity-20 lg:opacity-100 transition-opacity duration-300"
                 />
               </div>
