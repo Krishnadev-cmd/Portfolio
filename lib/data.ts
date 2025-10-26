@@ -18,7 +18,7 @@ export const personalInfo = {
     'LLM',
   ],
   achievementsLink: '/achievements',
-  resumeLink: 'https://docs.google.com/document/d/1iHu5du8seaWvDOyASRNOpOHsHLSsqf4W/edit?usp=sharing&ouid=106453264344342090622&rtpof=true&sd=true', // Placeholder for resume link
+  resumeLink: 'https://docs.google.com/document/d/1YmyQJtnoJ9rEIZFdprR3YQ-wV-mzCuZY/edit?usp=sharing&ouid=106453264344342090622&rtpof=true&sd=true', // Placeholder for resume link
 };
 
 export const skills = {
@@ -66,12 +66,46 @@ export const projects = [
   },
   {
     id: 3,
+    title: 'House Energy prediction (AWS)',
+    description: 'An end-to-end machine learning pipeline for predicting household energy consumption using AWS services and Next.js web interface.',
+    technologies: ['AWS' ,'PySpark' ,'SageMaker' ,'NextJS' , 'Machine Learning' , 'DataScience' ],
+    image: '/images/Gemini_Generated_Image_ohq17dohq17dohq1.png',
+    githubUrl: 'https://github.com/Krishnadev-cmd/House-Energy',
+  },
+  {
+    id: 4,
     title: 'Skill Swap',
     description: 'A modern platform for exchanging skills and knowledge within a community. Connect with like-minded individuals, share your expertise, and learn new skills through real-time interactions.',
     technologies: ['TypeScript', 'Next.js', 'LLM' , 'File Management' , 'Socket.io' , 'WebRTC' ],
     image: '/images/skill-swap.png', // Update with your project image path
     liveUrl: 'https://skill-swap-mauve-rho.vercel.app/',
     githubUrl: 'https://github.com/Krishnadev-cmd/Skill-Swap',
+  },
+];
+
+export const otherProjects = [
+  {
+    id: 1,
+    title: 'Astro-talk',
+    description: 'A web application for discussing and exploring astronomical topics, featuring a community-driven Q&A platform and real-time chat functionality.',
+    technologies: ['Next.js','Firebase', 'TypeScript','WebRTC', 'Socket.io', 'MongoDB', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/Krishnadev-cmd/Astro-talk',
+    liveUrl: 'https://astro-talk-three.vercel.app/',
+  },
+  {
+    id: 2,
+    title: 'Appointment Booking System',
+    description: 'A modern web application built with Next.js that allows users to book appointments with service providers and manage their calendars through Google Calendar integration.',
+    technologies: ['Next.js', 'PostgreSQL', 'Database Management', 'Google Calendar API' ,'SupaBase'],
+    githubUrl: 'https://github.com/Krishnadev-cmd/Calender',
+    liveUrl: 'https://calender-peach.vercel.app/dashboard',
+  },
+  {
+    id: 3,
+    title: 'The Football Player Detector',
+    description: 'A computer vision application designed to detect football players in video footage using the YOLOv10 object detection model. This tool utilizes the OpenCV library for video processing and annotation.',
+    technologies: ['Tensorflow', 'OpenCV', 'YOLOv10', 'Computer Vision', 'Python'],
+    githubUrl: 'https://github.com/Krishnadev-cmd/Football_Player_Detector',
   },
 ];
 
@@ -93,5 +127,6 @@ export const navLinks = [
   { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
+  { name: 'Other Projects', href: '#other-projects' },
   { name: 'Contact', href: '#contact' },
 ];
