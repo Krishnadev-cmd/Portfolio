@@ -23,7 +23,7 @@ export const personalInfo = {
 
 export const skills = {
   core: [
-    { name: 'Python', level: 90 },
+    { name: 'Python', level: 95 },
     { name: 'JavaScript', level: 90 },
     { name: 'TypeScript', level: 95 },
     { name: 'React.js', level: 90 },
@@ -119,6 +119,16 @@ export const experience = [
       'Participated in structured internship training and collaborative development sprints with cross-functional teams.',
     ],
     link: 'https://drive.google.com/file/d/1xQUV55womg2LMQSV_e-OiZs6VQwEabF5/view?usp=sharing',
+  },
+  {
+    company: 'UST Global',
+    title: 'Generative AI Engineer',
+    date: 'Dec 2025 - Present',
+    description: [
+      "Collaborated with Teams and Provided Efficient Solutions to Problems",
+      "Worked on Creating Prototype Solutions and Moving them to Production with Scalability , Reliability and Availability",
+    ],
+    // link: 'https://drive.google.com/file/d/1xQUV55womg2LMQSV_e-OiZs6VQwEabF5/view?usp=sharing',
   },
 ];
 
