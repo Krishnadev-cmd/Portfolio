@@ -125,8 +125,9 @@ export const experience = [
     title: 'Generative AI Engineer',
     date: 'Dec 2025 - Present',
     description: [
-      "Collaborated with Teams and Provided Efficient Solutions to Problems",
+      "Collaborated with Teams and Provided Solutions to Problems which improved Efficiency by 20%.s",
       "Worked on Creating Prototype Solutions and Moving them to Production with Scalability , Reliability and Availability",
+      "Developed and deployed a specialized RAG system to enable AI-driven insights from enterprise documents, which increased information retrieval speed for Financial clients by 18%.,"
     ],
     // link: 'https://drive.google.com/file/d/1xQUV55womg2LMQSV_e-OiZs6VQwEabF5/view?usp=sharing',
   },
