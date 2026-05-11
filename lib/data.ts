@@ -18,7 +18,7 @@ export const personalInfo = {
     'LLM',
   ],
   achievementsLink: '/achievements',
-  resumeLink: 'https://docs.google.com/document/d/1YmyQJtnoJ9rEIZFdprR3YQ-wV-mzCuZY/edit?usp=sharing&ouid=106453264344342090622&rtpof=true&sd=true', // Placeholder for resume link
+  resumeLink: 'https://docs.google.com/document/d/1LYsoj5SDBFeZrx8ZkE2ilYm4A6BkBV60/edit?usp=sharing&ouid=106453264344342090622&rtpof=true&sd=true'
 };
 
 export const skills = {
