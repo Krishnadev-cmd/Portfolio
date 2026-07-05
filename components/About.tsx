@@ -1,10 +1,23 @@
 'use client'
+
+import { useState } from 'react'
+import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { personalInfo } from '@/lib/data'
 import Image from 'next/image'
 
+const ThreeDDeveloper = dynamic(() => import('./ThreeDDeveloper'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-gray-950/20">
+      <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-violet-500"></div>
+    </div>
+  ),
+})
+
 export default function About() {
+  const [show3d, setShow3d] = useState(true)
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -61,15 +74,47 @@ export default function About() {
           </div>
         </div>
         <div className="mx-auto mt-16 md:mt-0 md:ml-14">
-            <div className="wrap-image w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 relative rounded-lg overflow-hidden shadow-lg">
+          <div className="w-72 h-72 md:w-64 md:h-64 lg:w-80 lg:h-80 relative rounded-2xl border border-white/10 bg-gradient-to-br from-violet-950/10 to-cyan-950/10 shadow-[0_0_50px_-12px_rgba(139,92,246,0.35)] hover:border-violet-500/20 transition-all duration-500 overflow-hidden">
+            {/* Interactive Toggle */}
+            <div className="absolute top-3 right-3 z-20 flex bg-gray-950/80 backdrop-blur-md border border-white/5 rounded-full p-0.5 shadow-lg select-none">
+              <button
+                onClick={() => setShow3d(true)}
+                className={`px-3 py-1 rounded-full text-[10px] md:text-xs font-bold transition-all duration-300 cursor-pointer ${
+                  show3d
+                    ? 'bg-violet-600 text-white shadow-md shadow-violet-600/30'
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                3D Model
+              </button>
+              <button
+                onClick={() => setShow3d(false)}
+                className={`px-3 py-1 rounded-full text-[10px] md:text-xs font-bold transition-all duration-300 cursor-pointer ${
+                  !show3d
+                    ? 'bg-violet-600 text-white shadow-md shadow-violet-600/30'
+                    : 'text-gray-400 hover:text-white'
+                }`}
+              >
+                Photo
+              </button>
+            </div>
+
+            {show3d ? (
+              <div className="w-full h-full relative">
+                <ThreeDDeveloper />
+              </div>
+            ) : (
+              <div className="w-full h-full relative">
                 <Image
-                src={personalInfo.profilePicture}
-                alt="profile pic"
-                fill
-                className="rounded-lg object-cover object-top"
+                  src={personalInfo.profilePicture}
+                  alt="profile pic"
+                  fill
+                  className="object-cover object-top filter grayscale hover:grayscale-0 transition-all duration-500"
                 />
-            </div>
-            </div>
+              </div>
+            )}
+          </div>
+        </div>
       </motion.div>
     </section>
   )

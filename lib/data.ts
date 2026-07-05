@@ -5,12 +5,12 @@ export const personalInfo = {
   address: 'Kannur , Kerala ,India',
   bio: 'I’m Krishnadev M, a developer who began my journey in tech as a AI Full Stack Web Developer in 2021. I quickly fell in love with coding and web development, crafting innovative and functional applications. Over time, my focus shifted to Machine Learning, AI, and Deep Networks. I’m currently pursuing an M.Tech CSE with a specialization in Artificial Intelligence & Data Analytics (AI&DA). Previously, I contributed to the Sunbird ED project, where I worked on solving real-world problems to make a positive impact. I’m always eager to explore new technologies and push the boundaries of what’s possible, with the goal of creating solutions that make a meaningful difference.',
   shortBio: 'Experienced in developing and deploying full-functional, robust and scalable web applications from base to production.',
-  profilePicture: '/images/profile.png', // Update with your actual profile picture path
+  profilePicture: '/images/photo_2026-06-25_19-46-47.jpg', // Update with your actual profile picture path
   social: {
     github: 'https://github.com/Krishnadev-cmd',
     linkedin: 'https://www.linkedin.com/in/krishnadev2263/',
   },
-    location: 'Kannur , Kerala ,India',
+  location: 'Kannur , Kerala ,India',
   recentSkills: [
     'NextJS',
     'NLP',
@@ -50,7 +50,7 @@ export const projects = [
     id: 1,
     title: 'Casual Competitor',
     description: 'A Streamlit web application for discovering causal relationships in your data using Microsoft\'s DoWhy library. This tool helps you identify and quantify causal effects between variables in your datasets through correlation-based graph discovery and rigorous causal inference.',
-    technologies: ['Causica', 'DoWhy', 'Correlation Analysis' , 'Streamlit' , 'Data Analysis' , 'Machine Learning'],
+    technologies: ['Causica', 'DoWhy', 'Correlation Analysis', 'Streamlit', 'Data Analysis', 'Machine Learning'],
     image: '/images/casual-competitor.png', // Update with your project image path
     liveUrl: 'https://casual-competitor-susbk7aqfls5uxswyrp2qz.streamlit.app/',
     githubUrl: 'https://github.com/Krishnadev-cmd/Casual-Competitor',
@@ -59,7 +59,7 @@ export const projects = [
     id: 2,
     title: 'S Files',
     description: 'A comprehensive, production-ready file management platform built with Next.js 15, designed specifically for students to store files as a cluster and understand their content using AI. Features Google authentication, cloud storage integration, and modern web technologies.',
-    technologies: ['TypeScript', 'Next.js', 'LLM' , 'File Management' , 'AWS S3 Object Storage' , 'R2 Containerization' ],
+    technologies: ['TypeScript', 'Next.js', 'LLM', 'File Management', 'AWS S3 Object Storage', 'R2 Containerization'],
     image: '/images/s-files.png', // Update with your project image path
     liveUrl: 'https://s-files.vercel.app/',
     githubUrl: 'https://github.com/Krishnadev-cmd/S-files',
@@ -68,7 +68,7 @@ export const projects = [
     id: 3,
     title: 'House Energy prediction (AWS)',
     description: 'An end-to-end machine learning pipeline for predicting household energy consumption using AWS services and Next.js web interface.',
-    technologies: ['AWS' ,'PySpark' ,'SageMaker' ,'NextJS' , 'Machine Learning' , 'DataScience' ],
+    technologies: ['AWS', 'PySpark', 'SageMaker', 'NextJS', 'Machine Learning', 'DataScience'],
     image: '/images/Gemini_Generated_Image_ohq17dohq17dohq1.png',
     githubUrl: 'https://github.com/Krishnadev-cmd/House-Energy',
   },
@@ -76,7 +76,7 @@ export const projects = [
     id: 4,
     title: 'Skill Swap',
     description: 'A modern platform for exchanging skills and knowledge within a community. Connect with like-minded individuals, share your expertise, and learn new skills through real-time interactions.',
-    technologies: ['TypeScript', 'Next.js', 'LLM' , 'File Management' , 'Socket.io' , 'WebRTC' ],
+    technologies: ['TypeScript', 'Next.js', 'LLM', 'File Management', 'Socket.io', 'WebRTC'],
     image: '/images/skill-swap.png', // Update with your project image path
     liveUrl: 'https://skill-swap-mauve-rho.vercel.app/',
     githubUrl: 'https://github.com/Krishnadev-cmd/Skill-Swap',
@@ -88,7 +88,7 @@ export const otherProjects = [
     id: 1,
     title: 'Astro-talk',
     description: 'A web application for discussing and exploring astronomical topics, featuring a community-driven Q&A platform and real-time chat functionality.',
-    technologies: ['Next.js','Firebase', 'TypeScript','WebRTC', 'Socket.io', 'MongoDB', 'Tailwind CSS'],
+    technologies: ['Next.js', 'Firebase', 'TypeScript', 'WebRTC', 'Socket.io', 'MongoDB', 'Tailwind CSS'],
     githubUrl: 'https://github.com/Krishnadev-cmd/Astro-talk',
     liveUrl: 'https://astro-talk-three.vercel.app/',
   },
@@ -96,7 +96,7 @@ export const otherProjects = [
     id: 2,
     title: 'Appointment Booking System',
     description: 'A modern web application built with Next.js that allows users to book appointments with service providers and manage their calendars through Google Calendar integration.',
-    technologies: ['Next.js', 'PostgreSQL', 'Database Management', 'Google Calendar API' ,'SupaBase'],
+    technologies: ['Next.js', 'PostgreSQL', 'Database Management', 'Google Calendar API', 'SupaBase'],
     githubUrl: 'https://github.com/Krishnadev-cmd/Calender',
     liveUrl: 'https://calender-peach.vercel.app/dashboard',
   },
@@ -136,6 +136,7 @@ export const experience = [
 export const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
+  { name: 'Stats', href: '#stats' },
   { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Other Projects', href: '#other-projects' },
