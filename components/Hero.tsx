@@ -1,12 +1,12 @@
 'use client'
-import { motion } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { personalInfo } from '@/lib/data'
 import TypewriterEffect from './TypewriterEffect'
 import Image from 'next/image'
 
 
 export default function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,14 +16,14 @@ export default function Hero() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.7,
-        ease: 'easeOut',
+        ease: 'easeOut' as const,
       },
     },
   }
