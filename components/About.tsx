@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { personalInfo } from '@/lib/data'
-import ProfileCard from './ProfileCard'
+import Image from 'next/image'
 
 export default function About() {
   const { ref, inView } = useInView({
@@ -43,12 +43,13 @@ export default function About() {
         variants={itemVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="flex flex-col md:flex-row items-center min-h-full text-lg font-medium text-gray-300"
+        className="flex flex-col md:flex-row items-center md:items-start min-h-full text-lg font-medium text-gray-300 gap-12"
       >
+        {/* Bio & skills text */}
         <div className="md:w-2/3">
           <p className="mb-4">{personalInfo.bio}</p>
           <p className="mb-4">
-            Here are a few technologies I’ve been working with recently:
+            Here are a few technologies I&apos;ve been working with recently:
           </p>
           <div className="recent-skills grid grid-cols-2 gap-2">
             {personalInfo.recentSkills.map((skill, index) => (
@@ -61,28 +62,38 @@ export default function About() {
             ))}
           </div>
         </div>
-        <div className="mx-auto mt-16 md:mt-0 md:ml-14 flex items-center justify-center">
-          <ProfileCard
-            name={personalInfo.name}
-            title="Generative AI Engineer"
-            handle="Krishnadev-cmd"
-            status="Available for hire"
-            contactText="Hire Me"
-            avatarUrl={personalInfo.profilePicture}
-            showUserInfo={false}
-            enableTilt={true}
-            enableMobileTilt={false}
-            onContactClick={() => {
-              const contactSection = document.getElementById('contact')
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' })
-              }
-            }}
-            behindGlowColor="rgba(125, 190, 255, 0.15)"
-            behindGlowEnabled
-            innerGradient="linear-gradient(145deg, #1e1b4b 0%, #030712 100%)"
-          />
-        </div>
+
+        {/* Clean profile picture */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92 }}
+          animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.92 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+          className="flex-shrink-0 flex flex-col items-center gap-4"
+        >
+          {/* Image with layered ring effect */}
+          <div className="relative group">
+            {/* Outer glow ring */}
+            <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-violet-600/60 to-blue-500/30 blur-sm opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
+            {/* Inner border */}
+            <div className="relative w-56 h-64 lg:w-64 lg:h-72 rounded-2xl overflow-hidden border border-violet-500/30">
+              <Image
+                src={personalInfo.profilePicture}
+                alt={personalInfo.name}
+                fill
+                priority
+                className="object-cover object-top"
+              />
+              {/* Subtle bottom gradient fade */}
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-[#0a0a1a]/40 to-transparent" />
+            </div>
+          </div>
+
+          {/* Name + title badge below photo */}
+          <div className="text-center">
+            <p className="text-white font-semibold text-base">{personalInfo.name}</p>
+            <p className="text-violet-400 text-sm mt-0.5">Generative AI Engineer</p>
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   )

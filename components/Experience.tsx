@@ -44,7 +44,7 @@ export default function Experience() {
           className="flex flex-col lg:flex-row gap-8"
         >
           {/* Company List (Tabs) */}
-          <div className="lg:w-1/4 flex lg:flex-col overflow-x-auto lg:overflow-y-auto no-scrollbar bg-gray-800 rounded-lg shadow-lg">
+          <div className="lg:w-1/4 flex lg:flex-col overflow-x-auto lg:overflow-visible no-scrollbar bg-gray-800 rounded-lg shadow-lg self-start">
             {experience.map((job, index) => (
               <button
                 key={job.company}

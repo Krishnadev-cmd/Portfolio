@@ -5,7 +5,7 @@ export const personalInfo = {
   address: 'Kannur , Kerala ,India',
   bio: 'I’m Krishnadev M, a developer who began my journey in tech as a AI Full Stack Web Developer in 2021. I quickly fell in love with coding and web development, crafting innovative and functional applications. Over time, my focus shifted to Machine Learning, AI, and Deep Networks. I’m currently pursuing an M.Tech CSE with a specialization in Artificial Intelligence & Data Analytics (AI&DA). Previously, I contributed to the Sunbird ED project, where I worked on solving real-world problems to make a positive impact. I’m always eager to explore new technologies and push the boundaries of what’s possible, with the goal of creating solutions that make a meaningful difference.',
   shortBio: 'Experienced in developing and deploying full-functional, robust and scalable web applications from base to production.',
-  profilePicture: '/images/photo_2026-06-25_19-46-47.jpg', // Update with your actual profile picture path
+  profilePicture: '/images/profile.png',
   social: {
     github: 'https://github.com/Krishnadev-cmd',
     linkedin: 'https://www.linkedin.com/in/krishnadev2263/',
