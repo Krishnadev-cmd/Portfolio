@@ -3,6 +3,7 @@ export const personalInfo = {
   email: 'ksisop2003@gmail.com',
   phone: '+91 7356432693',
   address: 'Kannur , Kerala ,India',
+  shortBio: 'Experienced in developing and deploying full-functional, robust and scalable web applications from base to production.',
   bio: 'I’m Krishnadev M, a developer who began my journey in tech as a Intern at Fellowship.ai and later as a Generative AI Engineer at UST Global. I Graduated from College Of Engineering Vadakara as an Computer Science Engineering Graduate in 2025 . I have Expertise in  Java , SpringBoot , Python , NextJS , React.JS , PostgrSQL , MongoDB and many more. I am Passionate about building Scalable , Reliable and Available Solutions',
   profilePicture: '/images/profile.png',
   social: {
