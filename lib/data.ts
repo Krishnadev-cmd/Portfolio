@@ -3,8 +3,7 @@ export const personalInfo = {
   email: 'ksisop2003@gmail.com',
   phone: '+91 7356432693',
   address: 'Kannur , Kerala ,India',
-  bio: 'I’m Krishnadev M, a developer who began my journey in tech as a AI Full Stack Web Developer in 2021. I quickly fell in love with coding and web development, crafting innovative and functional applications. Over time, my focus shifted to Machine Learning, AI, and Deep Networks. I’m currently pursuing an M.Tech CSE with a specialization in Artificial Intelligence & Data Analytics (AI&DA). Previously, I contributed to the Sunbird ED project, where I worked on solving real-world problems to make a positive impact. I’m always eager to explore new technologies and push the boundaries of what’s possible, with the goal of creating solutions that make a meaningful difference.',
-  shortBio: 'Experienced in developing and deploying full-functional, robust and scalable web applications from base to production.',
+  bio: 'I’m Krishnadev M, a developer who began my journey in tech as a Intern at Fellowship.ai and later as a Generative AI Engineer at UST Global. I Graduated from College Of Engineering Vadakara as an Computer Science Engineering Graduate in 2025 . I have Expertise in  Java , SpringBoot , Python , NextJS , React.JS , PostgrSQL , MongoDB and many more. I am Passionate about building Scalable , Reliable and Available Solutions',
   profilePicture: '/images/profile.png',
   social: {
     github: 'https://github.com/Krishnadev-cmd',
