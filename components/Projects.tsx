@@ -59,22 +59,21 @@ export default function Projects() {
             index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
           }`}
         >
-          <div className={`relative w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
-            <a href={project.liveUrl} target="_blank" rel="noreferrer" className="block">
-              <div className="relative w-full h-72 rounded-lg overflow-hidden shadow-xl">
+          <div className={`relative w-full lg:w-3/5 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
+            <a href={project.liveUrl || project.githubUrl} target="_blank" rel="noreferrer" className="block">
+              <div className="relative w-full aspect-[16/10] min-h-[320px] rounded-lg overflow-hidden bg-gray-900 shadow-xl">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  fill 
-                  objectFit="cover"
-                  objectPosition="top"
-                  className="opacity-20 lg:opacity-100 transition-opacity duration-300"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  className="object-contain object-center opacity-20 lg:opacity-100 transition-opacity duration-300"
                 />
               </div>
             </a>
           </div>
 
-          <div className={`w-full lg:w-1/2 p-6 lg:p-0 flex flex-col ${
+          <div className={`w-full lg:w-2/5 p-6 lg:p-0 flex flex-col ${
             index % 2 === 0 ? 'items-start lg:items-end text-left lg:text-right' : 'items-start text-left'
           } z-10`}>
             <div className="text-violet-500 my-2 text-sm">Featured Project</div>

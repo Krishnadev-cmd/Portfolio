@@ -74,12 +74,12 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Skill Swap',
-    description: 'A modern platform for exchanging skills and knowledge within a community. Connect with like-minded individuals, share your expertise, and learn new skills through real-time interactions.',
+    title: 'MarketOps',
+    description: ' compliance-driven platform for publishing marketing content across LinkedIn and web, enforcing dual-authorization approvals, version locking, pre-publish checks, and immutable audit logs.',
     technologies: ['TypeScript', 'Next.js', 'LLM', 'File Management', 'Socket.io', 'WebRTC'],
-    image: '/images/skill-swap.png', // Update with your project image path
-    liveUrl: 'https://skill-swap-mauve-rho.vercel.app/',
-    githubUrl: 'https://github.com/Krishnadev-cmd/Skill-Swap',
+    image: '/images/MarketOps.png', // Update with your project image path
+    liveUrl: 'https://marketing-ops-frontend.vercel.app/',
+    githubUrl: 'https://github.com/Krishnadev-cmd/MarketingOps',
   },
 ];
 
