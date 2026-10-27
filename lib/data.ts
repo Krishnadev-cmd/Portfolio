@@ -48,6 +48,15 @@ export const skills = {
 export const projects = [
   {
     id: 1,
+    title: 'MarketOps',
+    description: ' compliance-driven platform for publishing marketing content across LinkedIn and web, enforcing dual-authorization approvals, version locking, pre-publish checks, and immutable audit logs.',
+    technologies: ['TypeScript', 'Next.js', 'LLM', 'File Management', 'Socket.io', 'WebRTC'],
+    image: '/images/MarketOps.png', // Update with your project image path
+    liveUrl: 'https://marketing-ops-frontend.vercel.app/',
+    githubUrl: 'https://github.com/Krishnadev-cmd/MarketingOps',
+  },
+  {
+    id: 2,
     title: 'Casual Competitor',
     description: 'A Streamlit web application for discovering causal relationships in your data using Microsoft\'s DoWhy library. This tool helps you identify and quantify causal effects between variables in your datasets through correlation-based graph discovery and rigorous causal inference.',
     technologies: ['Causica', 'DoWhy', 'Correlation Analysis', 'Streamlit', 'Data Analysis', 'Machine Learning'],
@@ -56,7 +65,7 @@ export const projects = [
     githubUrl: 'https://github.com/Krishnadev-cmd/Casual-Competitor',
   },
   {
-    id: 2,
+    id: 3,
     title: 'S Files',
     description: 'A comprehensive, production-ready file management platform built with Next.js 15, designed specifically for students to store files as a cluster and understand their content using AI. Features Google authentication, cloud storage integration, and modern web technologies.',
     technologies: ['TypeScript', 'Next.js', 'LLM', 'File Management', 'AWS S3 Object Storage', 'R2 Containerization'],
@@ -65,22 +74,14 @@ export const projects = [
     githubUrl: 'https://github.com/Krishnadev-cmd/S-files',
   },
   {
-    id: 3,
+    id: 4,
     title: 'House Energy prediction (AWS)',
     description: 'An end-to-end machine learning pipeline for predicting household energy consumption using AWS services and Next.js web interface.',
     technologies: ['AWS', 'PySpark', 'SageMaker', 'NextJS', 'Machine Learning', 'DataScience'],
     image: '/images/Gemini_Generated_Image_ohq17dohq17dohq1.png',
     githubUrl: 'https://github.com/Krishnadev-cmd/House-Energy',
   },
-  {
-    id: 4,
-    title: 'MarketOps',
-    description: ' compliance-driven platform for publishing marketing content across LinkedIn and web, enforcing dual-authorization approvals, version locking, pre-publish checks, and immutable audit logs.',
-    technologies: ['TypeScript', 'Next.js', 'LLM', 'File Management', 'Socket.io', 'WebRTC'],
-    image: '/images/MarketOps.png', // Update with your project image path
-    liveUrl: 'https://marketing-ops-frontend.vercel.app/',
-    githubUrl: 'https://github.com/Krishnadev-cmd/MarketingOps',
-  },
+  
 ];
 
 export const otherProjects = [
