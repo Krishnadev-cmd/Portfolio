@@ -66,12 +66,12 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'S Files',
-    description: 'A comprehensive, production-ready file management platform built with Next.js 15, designed specifically for students to store files as a cluster and understand their content using AI. Features Google authentication, cloud storage integration, and modern web technologies.',
-    technologies: ['TypeScript', 'Next.js', 'LLM', 'File Management', 'AWS S3 Object Storage', 'R2 Containerization'],
-    image: '/images/s-files.png', // Update with your project image path
-    liveUrl: 'https://s-files.vercel.app/',
-    githubUrl: 'https://github.com/Krishnadev-cmd/S-files',
+    title: 'Scheme-Saathi',
+    description: 'A multilingual conversational AI platform that helps citizens discover suitable Indian government schemes, check eligibility, understand required documents, and access official application links.',
+    technologies: ['TypeScript', 'Next.js', 'LLM', 'Telegram Bot', "Pipeline"],
+    image: '/images/Gemini_Generated_Image_eeegfneeegfneeeg.png', // Update with your project image path
+    liveUrl: 'https://scheme-saathi-xi.vercel.app/',
+    githubUrl: 'https://github.com/Krishnadev-cmd/scheme-saathi',
   },
   {
     id: 4,
